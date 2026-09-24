@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #090014;
+    color: white;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   MAIN SCENE CONTAINER
+========================= */
+
+.scene {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* =========================
+   ALL SCENES
+========================= */
+
+.scene1,
+.scene2,
+.scene3,
+.scene4,
+.scene5,
+.scene6 {
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+}
+
+/* Scene 1 is the opening scene */
+
+.scene1 {
+    display: flex;
+
+    background:
+        radial-gradient(circle at center,
+        #5b164c 0%,
+        #210d2d 45%,
+        #090014 100%);
+}
+
+/* =========================
+   SCENE 1
+========================= */
+
+#h1 {
+    font-size: clamp(40px, 8vw, 80px);
+    margin-bottom: 20px;
+
+    animation: fadeDown 1.5s ease;
+}
+
+#p1 {
+    font-size: clamp(18px, 4vw, 28px);
+    margin-bottom: 35px;
+
+    color: #ffd6ec;
+
+    animation: fadeUp 2s ease;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #ff4fa3, #ff1744);
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(255, 70, 150, 0.5);
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 30px rgba(255, 70, 150, 0.9);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* =========================
+   SCENE 2
+========================= */
+
+.scene2 {
+
+    background:
+        radial-gradient(circle at center,
+        #38134d,
+        #15051f 65%,
+        #050008);
+}
+
+#h2 {
+    font-size: clamp(30px, 6vw, 65px);
+
+    margin-bottom: 25px;
+
+    color: #ffb7dc;
+
+    animation: fadeDown 1.2s ease;
+}
+
+#p2 {
+    max-width: 700px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+    color: #eee;
+}
+
+/* =========================
+   SCENE 3
+========================= */
+
+.scene3 {
+
+    justify-content: flex-start;
+
+    padding-top: 70px;
+
+    background:
+        linear-gradient(
+            rgba(5, 0, 12, 0.85),
+            rgba(15, 0, 20, 0.95)
+        );
+}
+
+/* Story text */
+
+#p3 {
+
+    width: min(900px, 90%);
+
+    max-height: 65vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    margin: 30px 0;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    font-size: 18px;
+
+    color: #f8eaf2;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.5);
+
+    backdrop-filter: blur(10px);
+}
+
+/* Scrollbar */
+
+#p3::-webkit-scrollbar {
+    width: 8px;
+}
+
+#p3::-webkit-scrollbar-thumb {
+    background: #ff4fa3;
+    border-radius: 20px;
+}
+
+/* Scene 3 heading */
+
+#h3 {
+
+    font-size: clamp(28px, 5vw, 50px);
+
+    margin: 20px;
+
+    color: #ffb4da;
+}
+
+/* =========================
+   SCENE 4
+========================= */
+
+.scene4 {
+
+    gap: 30px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #40153b,
+            #120014 70%
+        );
+}
+
+.scene4 video {
+
+    width: min(850px, 90%);
+
+    max-height: 70vh;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 40px rgba(255, 80, 170, 0.4);
+}
+
+/* =========================
+   SCENE 5
+========================= */
+
+.scene5 {
+
+    background:
+        radial-gradient(
+            circle,
+            #30204d,
+            #090014 70%
+        );
+
+    gap: 15px;
+}
+
+.scene5 h1 {
+
+    max-width: 700px;
+
+    font-size: clamp(25px, 5vw, 45px);
+
+    margin-bottom: 25px;
+
+    color: #ffd1ea;
+}
+
+#value {
+
+    display: block;
+
+    font-size: 80px;
+
+    font-weight: bold;
+
+    color: #ff69b4;
+
+    text-shadow:
+        0 0 20px #ff1493;
+
+    margin: 10px;
+}
+
+#num {
+
+    width: 100px;
+
+    height: 50px;
+
+    border: 2px solid #ff69b4;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    font-size: 25px;
+
+    text-align: center;
+
+    outline: none;
+}
+
+#num:focus {
+
+    box-shadow:
+        0 0 20px rgba(255, 105, 180, 0.7);
+}
+
+#roll {
+
+    margin-top: 10px;
+}
+
+#h4 {
+
+    font-size: 18px;
+
+    color: #ddd;
+
+    margin-top: 10px;
+}
+
+/* =========================
+   SCENE 6
+========================= */
+
+.scene6 {
+
+    background:
+        radial-gradient(
+            circle at center,
+            #50143c,
+            #0b0012 70%
+        );
+        position:relative;
+        height:100vh;
+        min-height:100vh;
+        overflow:hidden;
+}
+
+.scene6 audio {
+    position:relative;
+    top:8px;
+    left:50%;
+    transform:
+    translateX(-50%);
+
+    width:90%;
+    min-width:0;
+    opacity:0.5;
+    z-index:10;
+}
+
+.scene6.message {
+
+    position: absolute;
+    width:85%;
+    left:50%;
+    transform:
+    translateX(-50%)
+    translateY(100vh);
+
+    text-align:center;
+    line-height:1.8;
+    z-index:5;
+
+    animation: messageRise 45s
+    linear forwards;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes messageRise {
+    0%{
+        transform:
+        translateX(-50%)
+        translateY(100vh);
+    }
+    100%{
+        transform:
+        translateX(-50%)
+        translateY(-120%);
+    }
+
+}
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .scene1,
+    .scene2,
+    .scene3,
+    .scene4,
+    .scene5,
+    .scene6 {
+
+        padding: 20px;
+    }
+
+    #p3 {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        padding: 20px;
+
+        width: 95%;
+    }
+
+    #h1 {
+        font-size: 42px;
+    }
+
+    #h2 {
+        font-size: 32px;
+    }
+
+    .scene4 video {
+        width: 95%;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 13px 24px;
+    }
+}
